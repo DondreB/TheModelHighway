@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Model Highway</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">The Model Highway</a>
+        </div>
+        
+        <nav class="top-menu">
+            <ul>
+                <li><a href="sql.html">SQL</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="bi.html">BI</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Where the data gets clean, and the coffee gets dark.</h1>
+                    <p>You're here because you're thinking of becoming a Data Analyst, right?</p>
+                    <p>Great!</p>
+                    <p>Join me as we go down the path less traveled; an alternative way to get to your Data Analyst Destination!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features" aria-label="Explore sections">
+          <div class="cards" id="cards">
+            <article class="card sql">
+              <h3>SQL</h3>
+              <p>Learn how Data Analysts talk to data, demanding insights and making it confess its secrets..</p>
+              <a class="btn" href="sql.html">Dive into SQL</a>
+            </article>
+
+            <article class="card python">
+              <h3>Python</h3>
+              <p>The Swiss Amry knife in any DA's toolkit. Used to clean, analyze, automate and even build cool stuff!</p>
+              <a class="btn" href="python.html">Open Python</a>
+            </article>
+
+            <article class="card bi">
+              <h3>BI</h3>
+              <p>A fancy way to paint pretty pictures after your SQL and Python magic, in a way that the most dense exec can understand.</p>
+              <a class="btn" href="bi.html">View BI</a>
+            </article>
+
+            <article class="card portfolio">
+              <h3>Portfolio</h3>
+              <p>Prove that you know your stuff by showing, instead of telling with a piece of expensive paper. </p>
+              <a class="btn" href="portfolio.html">See Projects</a>
+            </article>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="prev" aria-label="Previous">‹</button>
+            <button class="next" aria-label="Next">›</button>
+          </div>
+        </section>
+
+<!-- Tiny helper script for arrow buttons -->
+<script>
+  (function () {
+    const scroller = document.getElementById('cards');
+    const prev = document.querySelector('.carousel-controls .prev');
+    const next = document.querySelector('.carousel-controls .next');
+    const step = () => Math.max(320, Math.min(600, scroller.clientWidth * 0.9));
+
+    prev.addEventListener('click', () => {
+      scroller.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+    next.addEventListener('click', () => {
+      scroller.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+  })();
+</script>
+       
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Model Highway. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>
